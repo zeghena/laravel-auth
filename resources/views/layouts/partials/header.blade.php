@@ -18,10 +18,15 @@
             </li>
             @if (Route::has('register'))
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">Register</a>
+                <a class="nav-link" href="{{ route('admin.posts.index') }}">Posts</a>
               </li>
             @endif
           @else
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('register') }}">Register</a>
+          </li>
+
             <li class="nav-item dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                 href="#" id="navbarDropdown" role="button" v-pre>
