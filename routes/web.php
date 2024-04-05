@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Guest\DashboardController as GuestDashboardController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Project\ProjectController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,15 @@ use Illuminate\Support\Facades\Route;
 // # Rotte pubbliche
 Route::get('/', [GuestDashboardController::class, 'index'])
   ->name('home');
+
+
+
+Route::get('/projects', [ProjectController::class, 'index'])->name('my projects');
+
+
+
+
+
 
 // # Rotte protette
 Route::middleware('auth')
